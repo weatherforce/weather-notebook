@@ -1,0 +1,15 @@
+before_script:
+  - docker login -u gitlab-ci -p $CI_BUILD_TOKEN registry.gitlab.com
+
+
+stages:
+  - build
+  - release
+
+
+build:
+  - make build
+
+
+release:
+  - docker push registry.gitlab.com/weatherforce-platform/weather-notebook
