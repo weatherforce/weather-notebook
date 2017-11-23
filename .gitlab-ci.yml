@@ -8,8 +8,12 @@ stages:
 
 
 build:
-  - make build
+  stage: build
+  script:
+    - make build
 
 
 release:
-  - docker push registry.gitlab.com/weatherforce-platform/weather-notebook
+  stage: release
+  script:
+    - docker push registry.gitlab.com/weatherforce-platform/weather-notebook
