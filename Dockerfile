@@ -5,6 +5,6 @@ RUN conda install --channel conda-forge \
     xarray dask iris siphon metpy
 
 RUN conda install --channel conda-forge --name python2 \
-    xarray dask pynio \
+    xarray dask pynio pyngl \
     iris iris-grib \
-    siphon metpy pynio 
+    siphon metpy
