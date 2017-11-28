@@ -1,5 +1,5 @@
 # Pin tag e1677043235c which works with reference docker deployment
-FROM jupyter/datascience-notebook:e1677043235c
+FROM jupyter/datascience-notebook:latest
 
 RUN conda install --yes --channel conda-forge \
     xarray dask iris siphon metpy
