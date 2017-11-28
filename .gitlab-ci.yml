@@ -4,8 +4,8 @@ build_image:
     - docker:dind
   script:
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
-    - docker build -t registry.gitlab.com/weatherforce-platform/weather-notebook .
-    - docker push registry.gitlab.com/weatherforce-platform/weather-notebook
+    - docker build -t registry.gitlab.com/weatherforce-platform/weather-notebook:$CI_COMMIT_SHA .
+    - docker push registry.gitlab.com/weatherforce-platform/weather-notebook:$CI_COMMIT_SHA
   only:
     - master
 
