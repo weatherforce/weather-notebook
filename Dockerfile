@@ -1,5 +1,5 @@
 # Pin tag e1677043235c which works with reference docker deployment
-FROM jupyter/datascience-notebook:e695064e04f4
+FROM jupyter/datascience-notebook:033056e6d164
 
 # Install meteo-specific libs for Python 3
 RUN conda install --yes --channel conda-forge \
