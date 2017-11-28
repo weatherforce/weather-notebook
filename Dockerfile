@@ -1,10 +1,8 @@
-# Pin tag 82b978b3ceeb to get Python 2, which has since been removed
-FROM jupyter/datascience-notebook:82b978b3ceeb
+# Pin tag e1677043235c which works with reference docker deployment
+FROM jupyter/datascience-notebook:e1677043235c
 
-RUN conda install --channel conda-forge \
+RUN conda install --yes --channel conda-forge \
     xarray dask iris siphon metpy
 
-RUN conda install --channel conda-forge --name python2 \
-    xarray dask pynio pyngl \
-    iris iris-grib \
-    siphon metpy
+COPY install-python2-environment.sh /tmp
+RUN bash /tmp/install-python2-environment.sh
