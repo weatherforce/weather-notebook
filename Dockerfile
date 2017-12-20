@@ -1,5 +1,4 @@
-# Pin tag e1677043235c which works with reference docker deployment
-FROM jupyter/datascience-notebook:033056e6d164
+FROM jupyter/datascience-notebook
 
 #### Python 3
 
