@@ -28,3 +28,7 @@ RUN conda install --yes --name python2 --channel conda-forge \
 # Downgrade pynio dependencies
 RUN conda install --yes --name python2 --channel conda-forge \
     poppler=0.52.0 xerces-c==3.1.4
+
+
+#### Add logo
+COPY files/custom /home/jovyan/.jupyter/custom
