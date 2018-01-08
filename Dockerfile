@@ -21,13 +21,15 @@ RUN bash /tmp/register-python2-kernel.sh
 
 # Install meteo-specific libs for Python 2
 RUN conda install --yes --name python2 --channel conda-forge \
-    xarray dask pynio pyngl \
+    xarray dask pynio \
     iris iris-grib \
     siphon metpy
 
-# Downgrade pynio dependencies
-RUN conda install --yes --name python2 --channel conda-forge \
-    poppler=0.52.0 xerces-c==3.1.4
+# Install PyNGL as per http://mailman.ucar.edu/pipermail/pyngl-talk/2017-December/000214.html
+RUN conda install --yes --name python2 \
+    --channel conda-forge \
+    --channel conda-forge/label/broken pyngl \
+    poppler=0.52.0 xerces-c==3.1.4 gsl
 
 
 #### Add logo
