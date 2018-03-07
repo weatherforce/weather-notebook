@@ -30,7 +30,3 @@ RUN conda install --yes --name python2 \
     --channel conda-forge \
     --channel conda-forge/label/broken pyngl \
     poppler=0.52.0 xerces-c==3.1.4 gsl
-
-
-#### Add logo
-COPY files/custom /home/jovyan/.jupyter/custom

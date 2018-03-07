@@ -1,5 +1,0 @@
-#ipython_notebook a[title=dashboard]::before {
-    content: url(logo.png);
-    float: left;
-    margin-right: 1em;
-}
